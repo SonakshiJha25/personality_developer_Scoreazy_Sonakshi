@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Course | Scoreazy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="resume-style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <img src="images/scoreazy.png" alt="Scoreazy Logo" class="nav-logo">
+            </div>
+            <a href="my-courses.html" class="nav-back">← Back to My Courses</a>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1>Resume Course: Personality Development</h1>
+        <div class="overall-progress">
+            <svg viewBox="0 0 36 36">
+                <path class="bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path id="overallMeter" class="progress" stroke-dasharray="0, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <text x="18" y="20.35" class="percentage">0%</text>
+            </svg>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="left-panel">
+            <h2>Now Playing</h2>
+            <video controls width="100%" poster="https://via.placeholder.com/640x360.png?text=Video+Preview">
+                <source src="your-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="notes-section">
+                <h3>Notes</h3>
+                <textarea id="notesArea" placeholder="Write important points..."></textarea>
+                <div class="note-btns">
+                    <button onclick="saveNotes()">Save</button>
+                    <button onclick="clearNotes()">Clear</button>
+                </div>
+            </div>
+        </section>
+
+        <aside class="right-panel">
+            <h3>Weekly Progress</h3>
+            <div id="weeks-container"></div>
+            <button id="downloadCertificate" class="hidden">Download Certificate</button>
+        </aside>
+    </main>
+
+    <!--  -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-inner">
+            <h3 id="popup-title">Week Completed</h3>
+            <p id="popup-message">Keep going strong!</p>
+        </div>
+    </div>
+
+    <script src="resume-script.js"></script>
+</body>
+
+</html>
